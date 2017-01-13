@@ -41,6 +41,9 @@ switch (command){
 	case "do-what-it-says":
 		doIt();
 	break;
+	default:
+		console.log("Sorry, we do not recognize this command. Please enter something else!");
+	break;
 }
 
 //in case the first argument is "my-tweets"
