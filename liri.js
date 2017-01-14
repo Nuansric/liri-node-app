@@ -21,11 +21,11 @@ var commandName = "";
 //loop through the array of input, so i =>3 will be combine together and use as the second argument
 for (var i=3; i < array.length; i++){
 
-	commandName = commandName + " " + array[i];
+	commandName = (commandName + " " + array[i]).trim();
 }
 
-
-
+console.log(commandName);
+function execute(){
 
 //cases based on the first user input (argument)
 switch (command){
@@ -53,7 +53,7 @@ switch (command){
 		console.log("Sorry, we do not recognize this command. Please enter something else!");
 	break;
 }
-
+}
 //in case the first argument is "my-tweets"
 function tweets(){
 
@@ -174,25 +174,10 @@ function doIt(){
 	  	commandName = dataArr[1];
 
 		//the check to see what variable command is, the call the appropreaite function
-		switch (command){
-
-			case "my-tweets":
-				tweets();
-			break;
-
-			case "spotify-this-song":
-				spotify();
-			break;
-
-			case "movie-this":
-				movie();
-			break;
-
-			case "do-what-it-says":
-				doIt();
-			break;
-		}
-
+		execute();
 
 	});
 }
+
+//the check to see what variable command is, the call the appropreaite function
+execute();
