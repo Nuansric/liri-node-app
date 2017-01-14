@@ -15,7 +15,15 @@ var client = new Twitter(TwittwerImport.twitterKeys);
 
 //user input variables
 var command = process.argv[2];
-var commandName = process.argv[3];
+var array = process.argv;
+var commandName = "";
+
+//loop through the array of input, so i =>3 will be combine together and use as the second argument
+for (var i=3; i < array.length; i++){
+
+	commandName = commandName + " " + array[i];
+}
+
 
 
 
@@ -82,7 +90,7 @@ function tweets(){
 function spotify(){
 
 	//if the user did not enter the second command, define it to "The Sign"
-	if (commandName === undefined){
+	if (commandName === ""){
 		commandName = "The Sign";
 	}
 
@@ -118,7 +126,7 @@ function spotify(){
 function movie(){
 	
 	//if the user did not enter the second command, define it to "Mr. No Body"
-	if (commandName === undefined){
+	if (commandName === ""){
 		commandName = "Mr. Nobody";
 	}
 
@@ -135,6 +143,7 @@ function movie(){
 		  	if (!error && response.statusCode === 200) {
 		  	
 		  		//to show
+		  		console.log("--------------------------------------------------------");
 		    	console.log("Title: " + JSON.parse(body).Title);
 		    	console.log("Plot: " + JSON.parse(body).Plot);		    
 		    	console.log("Year Released: " + JSON.parse(body).Year);
@@ -144,6 +153,7 @@ function movie(){
 		   		console.log("IMDB Rating:  " + JSON.parse(body).imdbRating);
 		   		console.log("Rotten Tomatoes Rating: " + JSON.parse(body).tomatoRating);
 		   		console.log("Rotten Tomatoes URL: " + JSON.parse(body).tomatoURL);
+		  		console.log("--------------------------------------------------------");
 		  
 		 	}
 		});
