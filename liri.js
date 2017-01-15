@@ -24,7 +24,7 @@ for (var i=3; i < array.length; i++){
 	commandName = (commandName + " " + array[i]).trim();
 }
 
-console.log(commandName);
+//switch case statement to scheck what if the first targument
 function execute(){
 
 //cases based on the first user input (argument)
