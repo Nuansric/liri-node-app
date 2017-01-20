@@ -1,3 +1,6 @@
+// use 'strict';
+
+
 //movie api variable, import npm request pkg
 var request = require("request");
 
@@ -73,8 +76,8 @@ function tweets(){
 			for (var i=0; i<20; i++){
 
 			  	//to show the first 20 tweets
-			  	console.log(tweets[i].text)
-			  	console.log("--------------------------------")
+			  	console.log(tweets[i].text);
+			  	console.log("--------------------------------");
 		    }
 
 		  }else{
@@ -116,7 +119,7 @@ function spotify(){
 		    console.log("Album Name: " + responses[i].album.name);
 		    console.log("Song Name : " + responses[i].name);
 		    console.log("Preview Link: " + responses[i].preview_url);
-		    console.log("----------------------------------")
+		    console.log("----------------------------------");
 	   	}
  	
 });
