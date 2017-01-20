@@ -61,7 +61,7 @@ switch (command){
 function tweets(){
 
 	// We will add the command to the log file.
-	fs.appendFile("log.txt", ", my-tweets" );
+	fs.appendFile("log.txt", "\nmy-tweets" );
 
 	//define the user id of the account to access
 	var params = {user_id: '775085593'};
@@ -98,7 +98,7 @@ function spotify(){
 	}
 
 	// We will add the command to the log file.
-	fs.appendFile("log.txt", ", spotify-this-song" + commandName );
+	fs.appendFile("log.txt", "\nspotify-this-song " + commandName );
 
 	//call the spotify api, using the second argument as the search term
 	getSpotify.search({ type: 'track', query: commandName, limit: 1 }, function(err, data) {
@@ -134,7 +134,7 @@ function movie(){
 	}
 
 	// We will add the command to the log file.
-	fs.appendFile("log.txt", ", movie-this" + commandName);
+	fs.appendFile("log.txt", "\nmovie-this" + commandName);
 
 	//set a variable for the queryurl, using second argument as the search term
 	var queryUrl = "http://www.omdbapi.com/?t=" + commandName + "&y=&plot=full&tomatoes=true&r=json";
