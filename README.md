@@ -14,4 +14,4 @@ This is a console app. LIRI is like iPhone's SIRI. However, while SIRI is a Spee
 * Open command line and run : 'node liri.js my-tweets' to see the last 20 tweets.
 * Open command line and run : 'node liri.js spotify-this-song "SONGNAME"' to see the all the songs with those key words.
 * Open command line and run : 'node liri.js movie-this "MOVIENAME"' to see the the movie information.
-* Open command line and run : 'node liri.js  do-what-it-says' to see sometihnt random.
+* Open command line and run : 'node liri.js  do-what-it-says' to see something random.
